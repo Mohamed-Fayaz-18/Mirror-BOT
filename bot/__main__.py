@@ -43,7 +43,7 @@ def stats(update, context):
             f'<b>├  🎮 RAM : {memory}%</b>\n' \
             f'<b>├  💽 DISK : {disk}%</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>╰──「 🚸 @AT_BOTs 🚸 」</b>'
+            f'<b>╰──「 🚸 @KOT_BOTS 🚸 」</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
@@ -53,8 +53,8 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/ayushteke/slam_aria_mirror_bot")
-    buttons.buildbutton("Channel", "https://t.me/AT_BOTs")
+    buttons.buildbutton("Repo", "https://t.me/KOT_SOURCE_CODE")
+    buttons.buildbutton("Channel", "https://t.me/KOT_BOTS")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     uptime = get_readable_time((time.time() - botStartTime))
@@ -64,7 +64,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else :
             sendMarkup(IMAGE_URL, start_string, context.bot, update, reply_markup)
     else :
-        sendMarkup(f"Oops! You are not allowed to use me.</b>.", context.bot, update, reply_markup)
+        sendMarkup(f"Oops! You are not allowed to use meh @KOT_FREE_DE_LA_HOYA_OFF MY OWENER.</b>.", context.bot, update, reply_markup)
 
 
 def restart(update, context):
